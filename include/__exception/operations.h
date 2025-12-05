@@ -21,7 +21,6 @@ _LIBCPP_BEGIN_UNVERSIONED_NAMESPACE_STD
 using unexpected_handler = void (*)();
 _LIBCPP_EXPORTED_FROM_ABI unexpected_handler set_unexpected(unexpected_handler) _NOEXCEPT;
 _LIBCPP_EXPORTED_FROM_ABI unexpected_handler get_unexpected() _NOEXCEPT;
-[[__noreturn__]] _LIBCPP_EXPORTED_FROM_ABI void unexpected();
 #endif
 
 using terminate_handler = void (*)();

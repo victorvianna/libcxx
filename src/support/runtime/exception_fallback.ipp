@@ -23,12 +23,6 @@ unexpected_handler set_unexpected(unexpected_handler func) noexcept {
 
 unexpected_handler get_unexpected() noexcept { return __libcpp_atomic_load(&__unexpected_handler); }
 
-[[noreturn]] void unexpected() {
-  (*get_unexpected())();
-  // unexpected handler should not return
-  terminate();
-}
-
 terminate_handler set_terminate(terminate_handler func) noexcept {
   return __libcpp_atomic_exchange(&__terminate_handler, func);
 }
